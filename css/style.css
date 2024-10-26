@@ -1,0 +1,202 @@
+/* классика, должна быть везде */
+/* чтобы ширина/высота контента не увеличивался, а оставался одним */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	padding: 0;
+	border: none;
+	background-color: #fff;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	/* хэдер с фикс шириной */
+	max-width: 1240px;
+	/* ставим хэдер по центру */
+	margin: 0 auto; /* слева и справа будет автоматически высчитываться расстояние */
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+body {
+	color: #151618;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.5;
+	/*  font-family: 'Cormorant', sans-serif; */
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* отступ сверху снизу по 30, слева и справа - 0 */
+	padding: 30px 0;
+	min-height: 140px;
+}
+
+.logo {
+	margin-bottom: 35px;
+}
+
+.menu__btn {
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around; /* вторая полоска была жирнее из-за space-between */
+	width: 40px;
+	height: 20px;
+	border: none;
+	padding: 0;
+	background: transparent;
+}
+
+.menu__btn span {
+	display: block;
+	background-color: #000;
+	height: 2px;
+	width: 100%;
+}
+
+.menu__list {
+	display: flex;
+	align-items: center;
+	/* между айтемами по ширине 65 расстояние */
+	gap: 0 65px;
+	font-weight: 400;
+	font-size: 18px;
+	margin-left: 85px;
+}
+
+
+
+.user-actions {
+	display: flex;
+	align-items: center;
+	gap: 0 20px;
+}
+
+.user-actions__item-search {
+	margin-left: 80px;
+}
+
+/* main */
+.top {
+	background-image: url(../images/top-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+}
+
+.top__inner {
+	height: 500px;
+	color: #fff;
+	font-family: 'Cormorant', serif;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.top__title {
+	font-size: 60px;
+	margin-bottom: 20px;
+	max-width: 780px;
+	line-height: 1;
+	font-weight: 400;
+}
+
+.top__text {
+	font-size: 24px;
+	margin-bottom: 48px;
+	max-width: 560px;
+	line-height: normal;
+}
+
+.blockquote__text {
+	text-align: center;
+	font-family: 'Cormorant', serif;
+	font-size: 40px;
+	font-style: italic;
+	font-weight: 300;
+	line-height: normal;
+	max-width: 704px;
+	margin: 150px auto; /* сверху и сниху 150, по бокам авто */
+}
+
+/* ниже основного css */
+/* применяется когда экран <1000px */
+@media(max-width: 1000px) {
+	.user-actions__item-search {
+    margin-left: 30px;
+	}
+
+	.menu {
+		margin-right: auto;
+	}
+
+	.menu__list {
+		margin-left: 60px;
+	}
+
+	.logo {
+		margin-bottom: 0;
+	}
+
+	.header__inner {
+		max-width: auto;
+	}
+
+	.blockquote__text {
+		margin-top: 120px;
+		margin-bottom: 135px;
+	}
+}
+
+@media(max-width: 860px) {
+	.menu__list {
+		display: none;
+	}
+	
+	.menu__btn {
+		display: flex;
+	}
+
+	.menu {
+		order:-1;
+		margin-right: 0;
+	}
+
+	.logo {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media(max-width: 768px) {
+
+}
+
+@media(max-width: 480px) {
+
+}
+
+@media(max-width: 360px) {
+
+}
